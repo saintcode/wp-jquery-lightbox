@@ -25,7 +25,7 @@ function jqlb_init() {
 	load_plugin_textdomain('wp-jquery-lightbox', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/');	
 	add_action('admin_init', 'jqlb_register_settings');
 	add_action('admin_menu', 'jqlb_register_menu_item');
-	add_action('wp_print_styles', 'jqlb_css');	
+	add_action('get_footer', 'jqlb_css');	
 	add_action('wp_print_scripts', 'jqlb_js');
 	add_filter('plugin_row_meta', 	'jqlb_set_plugin_meta', 2, 10);	
 	add_filter('the_content', 'jqlb_autoexpand_rel_wlightbox', 99);
